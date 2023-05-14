@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">วันและเวลาที่มาโรงพยาบาล</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-name">วันที่มาโรงพยาบาล</label>
                 <div class="col-sm-10">
                     <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
                 </div>

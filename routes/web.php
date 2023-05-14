@@ -16,11 +16,14 @@ use Illuminate\Support\Facades\Route;
 $controller_path = 'App\Http\Controllers';
 
 // Main Page Route
-Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+// Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+Route::get('/', function () {
+  return redirect()->route('triage-index');
+})->name('dashboard-analytics');
 
 
 //Triage
-Route::get('/triage', $controller_path .'\TriageController@index')->name('triage-index');
+Route::get('/triage', $controller_path . '\TriageController@index')->name('triage-index');
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');

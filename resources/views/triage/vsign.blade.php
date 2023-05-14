@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">อุณหภูมิร่างกาย</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-name">Body Temperature</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
                         <input type="text" class="form-control" placeholder="กรอกอุณหภูมิร่างกาย" />
@@ -15,12 +15,12 @@
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">ความดันเลือด</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-name">Blood Pressure</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอกความดันเลือด1" />
+                        <input type="text" class="form-control" placeholder="กรอกความดันโลหิต1" />
                         <span class="input-group-text" id="basic-addon33">/</span>
-                        <input type="text" class="form-control" placeholder="กรอกความดันเลือด2" />
+                        <input type="text" class="form-control" placeholder="กรอกความดันโลหิต2" />
                         <span class="input-group-text" id="basic-addon33">mmHg</span>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-email">อายุ</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-email">Age</label>
                 <div class="col-sm-10">
                     <div class="col-md">
                         <div class="input-group mb-3">
