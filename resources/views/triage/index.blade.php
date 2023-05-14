@@ -79,32 +79,48 @@
     </div>
 
     {{-- ข้อมูลทั่วไป --}}
-    <div class="col-12">
-        <div class="card mb-4">
-            <h5 class="card-header">แบบคัดกรองผู้ป่วยห้องฉุกเฉิน</h5>
-            <div class="card-body">
-                <p class="card-text">
-                    กดเลือกหัวข้อแบบคัดกรอง
-                </p>
-                <p class="demo-inline-spacing">
-                    <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-                        ข้อมูลทั่วไป
-                    </button>
-                    <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                        Vital Sign
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample1">
-                    {{-- ข้อมูลทั่วไป --}}
-                    @include('triage.general')
+
+    <div class="card">
+        <div class="card-header">
+            <div class="form-row">
+                <div class="col-sm-6">
+                    <h5>แบบคัดกรองผู้ป่วยห้องฉุกเฉิน</h5>
                 </div>
-                <div class="collapse" id="collapseExample2">
-                    {{-- ข้อมูลทั่วไป --}}
-                    @include('triage.vsign')
+                <div class="col-sm-6 text-right">
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </div>
         </div>
+        <div class="card-body">
+            <p class="card-text">
+                กดเลือกหัวข้อแบบคัดกรอง
+            </p>
+            <p class="demo-inline-spacing">
+                <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                    ข้อมูลทั่วไป
+                </button>
+                <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    Vital Sign
+                </button>
+                <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                    ประเมินแน้วโน้มความต้องการทำกิจกรรม Resource
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample1">
+                {{-- ข้อมูลทั่วไป --}}
+                @include('triage.general')
+            </div>
+            <div class="collapse" id="collapseExample2">
+                {{-- ข้อมูลทั่วไป --}}
+                @include('triage.vsign')
+            </div>
+            <div class="collapse" id="collapseExample3">
+                {{-- ข้อมูลทั่วไป --}}
+                @include('triage.resource')
+            </div>
+        </div>
     </div>
+
 
 
 </div>
