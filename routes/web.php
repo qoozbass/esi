@@ -24,6 +24,7 @@ Route::get('/', function () {
 
 //Triage
 Route::get('/triage', $controller_path . '\TriageController@index')->name('triage-index');
+Route::post('/triage-asses', $controller_path . '\TriageController@asses')->name('triage-asses');
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');

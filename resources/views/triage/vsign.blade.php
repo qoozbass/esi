@@ -8,7 +8,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Body Temperature</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอกอุณหภูมิร่างกาย" />
+                        <input name='v_bt' type="text" class="form-control" placeholder="กรอกอุณหภูมิร่างกาย" />
                         <span class="input-group-text" id="basic-addon33">องศาเซลเซียส</span>
                     </div>
                 </div>
@@ -18,9 +18,9 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Blood Pressure</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอกความดันโลหิต1" />
+                        <input name='v_bp1' type="text" class="form-control" placeholder="กรอกความดันโลหิต1" />
                         <span class="input-group-text" id="basic-addon33">/</span>
-                        <input type="text" class="form-control" placeholder="กรอกความดันโลหิต2" />
+                        <input name='v_bp2' type="text" class="form-control" placeholder="กรอกความดันโลหิต2" />
                         <span class="input-group-text" id="basic-addon33">mmHg</span>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Oxygen Sat</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอก Oxygen Sat" />
+                        <input name='v_oxy' type="text" class="form-control" placeholder="กรอก Oxygen Sat" />
                         <span class="input-group-text" id="basic-addon33">%(RA)</span>
 
                     </div>
@@ -41,7 +41,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">DTX</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอก DTX" />
+                        <input name='v_dtx' type="text" class="form-control" placeholder="กรอก DTX" />
                         <span class="input-group-text" id="basic-addon33">mg%</span>
                     </div>
                 </div>
@@ -53,25 +53,25 @@
                     <div class="col-md">
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="default-radio-1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">มากกว่า 8 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="default-radio-1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="2" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">3 เดือน ถึง 8 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="default-radio-1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="3" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">3 เดือน ถึง 3 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="default-radio-1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="4" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">ต่ำกว่า 3 เดือน</span>
                         </div>
@@ -84,7 +84,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">PR</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอก PR" />
+                        <input name="v_PR" type="text" class="form-control" placeholder="กรอก PR" />
                         <span class="input-group-text" id="basic-addon33">/min</span>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">RR</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="กรอก RR" />
+                        <input name="v_RR" type="text" class="form-control" placeholder="กรอก RR" />
                         <span class="input-group-text" id="basic-addon33">/min</span>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Pain Score</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input type="text" class="form-control" placeholder="Pain Score" />
+                        <input name="v_painscore" type="text" class="form-control" placeholder="Pain Score" />
                     </div>
                 </div>
             </div>
