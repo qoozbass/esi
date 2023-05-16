@@ -53,25 +53,25 @@
                     <div class="col-md">
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="v_age" value="1" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="1" class="form-check-input mt-0" type="radio" aria-label="Radio button for following text input" checked>
                             </div>
                             <span class="input-group-text">มากกว่า 8 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="v_age" value="2" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="2" class="form-check-input mt-0" type="radio" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">3 เดือน ถึง 8 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="v_age" value="3" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="3" class="form-check-input mt-0" type="radio" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">3 เดือน ถึง 3 ปี</span>
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input name="v_age" value="4" class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
+                                <input name="v_age" value="4" class="form-check-input mt-0" type="radio" aria-label="Radio button for following text input">
                             </div>
                             <span class="input-group-text">ต่ำกว่า 3 เดือน</span>
                         </div>
