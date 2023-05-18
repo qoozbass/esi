@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -25,7 +26,7 @@ class TriageController extends Controller
       'v_PR' => 'required|integer',
       'v_RR' => 'required|integer',
       'v_painscore' => 'required|integer',
-    ],[
+    ], [
       'v_bt.required' => 'กรุณากรอก Body Temperature',
       'v_bt.integer' =>  'กรุณากรอก Body Temperature เป็นตัวเลข',
       'v_bp1.required' => 'กรุณากรอก Blood Pressure 1',
@@ -42,7 +43,7 @@ class TriageController extends Controller
       'v_RR.integer' => 'กรุณากรอก RR เป็นตัวเลข',
       'v_painscore.required' => 'กรุณากรอก Pain Score',
       'v_painscore.integer' => 'กรุณากรอก Pain Score',
-      
+
     ]);
 
     $data = $request->all();
@@ -52,13 +53,13 @@ class TriageController extends Controller
       if (str_contains($key, 'r1')) {
         $data['esi'] = 1;
         // dd($data);
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       }
       //Check level 2
       if (str_contains($key, 'r2')) {
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       }
       //Check level 3
@@ -72,47 +73,67 @@ class TriageController extends Controller
       if (intval($data['v_oxy']) < 92) {
         // dd( 1);
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       } elseif (intval($data['v_age']) == 4 && intval($data['v_PR']) >= 180 &&  intval($data['v_RR']) > 50) {
         // dd( 2);
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       } elseif (intval($data['v_age']) == 3 && intval($data['v_PR']) > 160 &&  intval($data['v_RR']) > 40) {
         // dd( 3);
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       } elseif (intval($data['v_age']) == 2 && intval($data['v_PR']) > 140 &&  intval($data['v_RR']) > 30) {
         // dd( 4);
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       } elseif (intval($data['v_age']) == 1 && intval($data['v_PR']) > 100 &&  intval($data['v_RR']) > 20) {
         // dd( 5);
         $data['esi'] = 2;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       } else {
         $data['esi'] = 3;
-        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+        Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
         return view('triage.result')->with('data', $data);
       }
     }
     //Check level 4
     if ($cout_r == 1) {
       $data['esi'] = 4;
-      Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+      Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
       return view('triage.result')->with('data', $data);
     }
     //Check level 5
     if ($cout_r == 0) {
       $data['esi'] = 5;
-      Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: '.$data['esi']);
+      Alert::success('ประเมินสำเร็จ', 'ผลการประเมิน ESI ระดับ: ' . $data['esi']);
       return view('triage.result')->with('data', $data);
     }
-    
+
     return view('triage.result')->with(['success', 'ประเมินสำเร็จ!'])->with('data', $data);
+  }
+
+  public function login(Request $request)
+  {
+    // dd($request->all());
+    if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+      $user = Auth::user();
+      $success['token'] =  $user->createToken('MyApp')->plainTextToken;
+      $success['name'] =  $user->name;
+
+      return redirect()->route('triage-index');
+    } else {
+      return redirect()->back();
+    }
+  }
+
+  public function logout()
+  {
+    Auth::guard('web')->logout();
+    return redirect()->route('home');
   }
 }

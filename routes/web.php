@@ -17,15 +17,23 @@ $controller_path = 'App\Http\Controllers';
 
 // Main Page Route
 // Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+// Route::get('/', function () {
+//   return redirect()->route('triage-index');
+// })->name('triage-login');
 Route::get('/', function () {
-  return redirect()->route('triage-index');
-})->name('dashboard-analytics');
+  return view('triage.login');
+})->name('home');
 
-
+// Route::get('/triage-login', $controller_path . '\TriageController@login')->name('triage-login');
+Route::post('/login', $controller_path . '\TriageController@login')->name('login');
 //Triage
-Route::get('/triage', $controller_path . '\TriageController@index')->name('triage-index');
-Route::post('/triage-asses', $controller_path . '\TriageController@asses')->name('triage-asses');
-
+Route::middleware('auth:sanctum')->group(function () {
+  $controller_path = 'App\Http\Controllers';
+ 
+  Route::get('/logout', $controller_path . '\TriageController@logout')->name('logout');
+  Route::get('/triage', $controller_path . '\TriageController@index')->name('triage-index');
+  Route::post('/triage-asses', $controller_path . '\TriageController@asses')->name('triage-asses');
+});
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');
 Route::get('/layouts/without-navbar', $controller_path . '\layouts\WithoutNavbar@index')->name('layouts-without-navbar');

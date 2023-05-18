@@ -12,6 +12,12 @@
           "slug": "triage"
         }
       ]
+    },
+
+    {
+      "url": "/logout",
+      "name": "ออกจากระบบ",
+      "slug": "logout"
     }
   ]
 }
