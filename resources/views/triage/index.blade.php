@@ -141,7 +141,7 @@
                                 กดเลือกหัวข้อแบบคัดกรอง
                             </p>
                             <p class="demo-inline-spacing">
-                                <button class="btn btn-primary me-1" type="button" data-bs-toggle="collapse"
+                                <button id="button1" class="btn btn-primary me-1" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseExample1" aria-expanded="false"
                                     aria-controls="collapseExample">
                                     ข้อมูลทั่วไป
@@ -177,4 +177,16 @@
                 </div>
             </form>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            $("button").on("click", function() {
+                if ($(this).hasClass("btn-primary")) {
+                    $(this).removeClass("btn-primary");
+                    $(this).addClass("btn-secondary");
+                } else {
+                    $(this).removeClass("btn-secondary");
+                    $(this).addClass("btn-primary");
+                }
+            });
+        </script>
     @endsection
