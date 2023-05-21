@@ -8,7 +8,7 @@
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Body Temperature</label>
                 <div class="col-sm-10">
                     <div class="input-group input-group-merge">
-                        <input name='v_bt' type="text" class="form-control" placeholder="กรอกอุณหภูมิร่างกาย" />
+                        <input name='v_bt' type="text" class="form-control" placeholder="กรอกอุณหภูมิร่างกายพรอททศนิยม (ตัวอย่าง 37.5ม 37.0)" />
                         <span class="input-group-text" id="basic-addon33">องศาเซลเซียส</span>
                     </div>
                 </div>
@@ -33,16 +33,6 @@
                         <input name='v_oxy' type="text" class="form-control" placeholder="กรอก Oxygen Sat" />
                         <span class="input-group-text" id="basic-addon33">%(RA)</span>
 
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">DTX</label>
-                <div class="col-sm-10">
-                    <div class="input-group input-group-merge">
-                        <input name='v_dtx' type="text" class="form-control" placeholder="กรอก DTX" />
-                        <span class="input-group-text" id="basic-addon33">mg%</span>
                     </div>
                 </div>
             </div>
@@ -108,6 +98,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label" for="basic-default-name">DTX</label>
+              <div class="col-sm-10">
+                  <div class="input-group input-group-merge">
+                      <input name='v_dtx' type="number" class="form-control" placeholder="กรอก DTX" />
+                      <span class="input-group-text" id="basic-addon33">mg%</span>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
 </div>
